@@ -1,0 +1,22 @@
+@import "vars.scss";
+@import "assets/btn.scss";
+@import "assets/input.scss";
+@import "assets/utils.scss";
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    font-family: 'Poppins', sans-serif;
+}
+
+.fa {
+    padding-top: 3px;
+}

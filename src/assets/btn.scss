@@ -1,0 +1,15 @@
+@import "../vars.scss";
+
+.btn {
+    padding: 5px 20px;
+    text-align: center;
+    min-width: 125px;
+    border: 1px solid $dark;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: $primary;
+    color: $white;
+}

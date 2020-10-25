@@ -1,0 +1,12 @@
+<div class="sidebar-container">
+    <h3>Toolbox <i class="fas fa-toolbox m-l-15"></i></h3>
+
+    <h4 class="m-b-0" (click)="toggleMenuItem('colorPalette')">Color Palette <i class="fas fa-palette m-l-15"></i></h4>
+    <app-color-palette *ngIf="menu.colorPalette"></app-color-palette>
+
+    <h4 class="m-b-0" (click)="toggleMenuItem('componentList')">Components<i class="fas fa-hammer m-l-15"></i></h4>
+    <app-component-builder *ngIf="menu.elements"></app-component-builder>
+
+    <h4 class="m-b-0" (click)="toggleMenuItem('styler')">Styles<i class="fas fa-code m-l-15"></i></h4>
+    <app-styler *ngIf="menu.styles"></app-styler>
+</div>

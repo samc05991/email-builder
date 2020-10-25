@@ -1,0 +1,15 @@
+<div class="palette-container">
+    <div class="color-palette">
+        <div *ngFor="let color of colorPalette; index as i;" class="color m-t-10">
+            <div class="clickable-color" [ngStyle]="{'background-color': color.hex}"></div>
+
+            <i class="far fa-minus-square" (click)="removeColor(i)"></i>
+        </div>
+    </div>
+
+    <div class="add-colors">
+        <input type="text" class="input" id="hex" [(ngModel)]="newColor.hex" placeholder="#000000" name="hex">
+
+        <button type="button" class="btn btn-primary m-l-15" (click)="addColor()">Save</button>
+    </div>
+</div>

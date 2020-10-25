@@ -1,0 +1,45 @@
+@import "../../vars.scss";
+
+.palette-container {
+
+    .color-palette {
+        width: 100%;
+        display: grid;
+
+        .color {
+            text-align: center;
+            display: inline-flex;
+            margin: 0 auto;
+
+            .clickable-color {
+                margin: 0 auto;
+                cursor: pointer;
+                width: 50px;
+                height: 20px;
+                border: 2px solid $secondary;
+            }
+
+            i {
+                font-size: 15px;
+                margin: 2px 10px;
+                color: $danger;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .add-colors {
+        margin-top: 8px;
+    }
+
+    .btn {
+        min-width: unset;
+        padding: 3px 20px 3px 20px;
+    }
+
+    .input {
+        height: 24px;
+        width: 65px;
+        padding-left: 5px;
+    }
+}
