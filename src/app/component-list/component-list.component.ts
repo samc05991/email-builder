@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
+import { RendererService } from 'src/services/RendererService';
+import { RenderedComponent } from '../../models/RenderedComponent';
 
 @Component({
   selector: 'app-component-list',
@@ -7,36 +9,51 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComponentListComponent implements OnInit {
 
-  componentList:any=[
-    {
-      name:"image",
-      icon:"fa-toolbox",
-    }, 
-    {
-      name:"header",
-      icon:"fa-user"
-    },
-    {
-      name:"Container",
-      icon:"fa-box"
-    },
-    {
-      name:"Footer",
-      icon:"fa-shoe-prints",
-    },
-    {
-      name:"Text",
-      icon:"fa-text-width",
-    },
-    {
-      name:"heading",
-      icon:"fa-heading",
-    },
-  ];
+    componentList: RenderedComponent[] = [];
 
-  constructor() { }
+    constructor(private _renderer: Renderer2, private _rendererService: RendererService) { }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+        this.createComponents();
+    }
 
+    renderHtml(item: RenderedComponent) {
+        console.log(item);
+        this._rendererService.add(item)
+    }
+
+    createComponents() {
+        let components = [{
+            name:"Image",
+            icon:"fa-toolbox",
+        }, 
+        {
+            name:"Header",
+            icon:"fa-user",
+        },
+        {
+            name:"Container",
+            icon:"fa-box",
+        },
+        {
+            name:"Footer",
+            icon:"fa-shoe-prints",
+        },
+        {
+            name:"Text",
+            icon:"fa-text-width",
+        },
+        {
+            name:"Heading",
+            icon:"fa-heading",
+        },
+        {
+            name:"Card",
+            icon:"fa-heading",
+        }];
+
+        for (let i = 0; i < components.length; i++) {
+            this.componentList.push(new RenderedComponent(components[i]))
+        }
+    }
 }

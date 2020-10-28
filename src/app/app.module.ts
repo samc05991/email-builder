@@ -15,6 +15,9 @@ import { ComponentBuilderComponent } from './component-builder/component-builder
 import { ComponentListComponent } from './component-list/component-list.component';
 import { ComponentComponent } from './component/component.component';
 
+// rendered components
+import { HeaderComponentComponent } from './renderer-components/header-component/header-component.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +30,8 @@ import { ComponentComponent } from './component/component.component';
     StylerComponent,
     ComponentBuilderComponent,
     ComponentListComponent,
-    ComponentComponent
+    ComponentComponent,
+    HeaderComponentComponent
   ],
   imports: [
     BrowserModule,
