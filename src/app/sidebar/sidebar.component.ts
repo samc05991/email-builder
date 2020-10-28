@@ -11,6 +11,7 @@ export class SidebarComponent implements OnInit {
         colorPalette: false,
         elements: false,
         styles: false,
+        componentList: false,
     }
 
     constructor() { }

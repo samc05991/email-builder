@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "email-builder"
+    }
+  },
+  "defaultProject": "email-builder",
+  "cli": {
+    "analytics": false
+  }
 }

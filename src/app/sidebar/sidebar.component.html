@@ -5,7 +5,7 @@
     <app-color-palette *ngIf="menu.colorPalette"></app-color-palette>
 
     <h4 class="m-b-0" (click)="toggleMenuItem('componentList')">Components<i class="fas fa-hammer m-l-15"></i></h4>
-    <app-component-builder *ngIf="menu.elements"></app-component-builder>
+    <app-component-list *ngIf="menu.componentList"></app-component-list>
 
     <h4 class="m-b-0" (click)="toggleMenuItem('styler')">Styles<i class="fas fa-code m-l-15"></i></h4>
     <app-styler *ngIf="menu.styles"></app-styler>
