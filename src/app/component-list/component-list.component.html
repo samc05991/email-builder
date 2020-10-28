@@ -1,1 +1,8 @@
-<p>component-list works!</p>
+<div *ngFor="let component of componentList; index as i;" > 
+    <p> {{component.name}}
+        <i class="fas" [ngClass]="[ component.icon]"></i>
+    </p>
+    
+    
+
+</div>
