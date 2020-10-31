@@ -18,38 +18,25 @@ export class ComponentListComponent implements OnInit {
     }
 
     renderHtml(item: RenderedComponent) {
-        console.log(item);
         this._rendererService.add(item)
     }
 
     createComponents() {
         let components = [{
             name:"Image",
-            icon:"fa-toolbox",
+            icon:"fa-image",
         }, 
         {
-            name:"Header",
-            icon:"fa-user",
-        },
-        {
-            name:"Container",
+            name:"Section",
             icon:"fa-box",
         },
         {
-            name:"Footer",
-            icon:"fa-shoe-prints",
-        },
-        {
             name:"Text",
-            icon:"fa-text-width",
-        },
-        {
-            name:"Heading",
-            icon:"fa-heading",
+            icon:"fa-font",
         },
         {
             name:"Card",
-            icon:"fa-heading",
+            icon:"fa-square",
         }];
 
         for (let i = 0; i < components.length; i++) {

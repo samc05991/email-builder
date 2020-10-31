@@ -17,6 +17,12 @@ import { ComponentComponent } from './component/component.component';
 
 // rendered components
 import { HeaderComponentComponent } from './renderer-components/header-component/header-component.component';
+import { CardComponentComponent } from './renderer-components/card-component/card-component.component';
+import { SectionComponentComponent } from './renderer-components/section-component/section-component.component';
+import { ImageComponentComponent } from './renderer-components/image-component/image-component.component';
+import { TextComponentComponent } from './renderer-components/text-component/text-component.component';
+import { SelectedElementComponent } from './selected-element/selected-element.component';
+import { EmailStructureComponent } from './email-structure/email-structure.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +37,13 @@ import { HeaderComponentComponent } from './renderer-components/header-component
     ComponentBuilderComponent,
     ComponentListComponent,
     ComponentComponent,
-    HeaderComponentComponent
+    HeaderComponentComponent,
+    CardComponentComponent,
+    SectionComponentComponent,
+    ImageComponentComponent,
+    TextComponentComponent,
+    SelectedElementComponent,
+    EmailStructureComponent,
   ],
   imports: [
     BrowserModule,

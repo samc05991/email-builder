@@ -1,6 +1,15 @@
 @import "../../vars.scss";
 
 .renderer-container {
-    background-color: $white;
+    background-color: $renderer;
     height: 100%;
+
+    .email-body {
+
+    }
+}
+
+.rendered-component:hover {
+    border: 2px solid $secondary;
+    cursor: pointer;
 }

@@ -1,0 +1,16 @@
+@import "../../vars.scss";
+
+.styler-container {
+    color: $primary;
+    background-color: $secondary;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    text-align: center;
+
+    i {
+        font-size: 20px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+}
