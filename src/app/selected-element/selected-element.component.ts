@@ -10,9 +10,14 @@ import { StylerService } from 'src/services/StylerService';
 })
 export class SelectedElementComponent implements OnInit {
     selectedElement: any;
+    selectedComponent: any;
 
-    constructor(private _rendererService: RendererService, private _stylerService: StylerService) {
+    constructor(private _stylerService: StylerService) {
         this.selectedElement = _stylerService.element;
+       _stylerService.itemAdded$.subscribe((item: any) => {
+        this.selectedComponent=item;
+        console.log(item);
+    });
     }
 
     ngOnInit(): void {

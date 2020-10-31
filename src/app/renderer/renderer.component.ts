@@ -21,7 +21,7 @@ export class RendererComponent implements OnInit {
 
     }
 
-    selectElement(index: number) {
-        this._stylerService.selectElement(index);
+    selectElement(index: number, component:RenderedComponent) {
+        this._stylerService.selectElement(index, component);
     }
 }
