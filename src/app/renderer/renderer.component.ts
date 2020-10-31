@@ -11,14 +11,19 @@ import { StylerService } from 'src/services/StylerService';
 })
 export class RendererComponent implements OnInit {
 
-    components = [];
+    rows = [];
 
     constructor(private _rendererService: RendererService, private _stylerService: StylerService) {
-        _rendererService.itemAdded$.subscribe((item: RenderedComponent) => this.components.push(item));
+        // _rendererService.itemAdded$.subscribe((item: RenderedComponent) => this.rows.push(item));
+        this.rows = _rendererService.renderedRows;
     }
 
     ngOnInit(): void {
 
+    }
+
+    selectRow(index: number) {
+        this._stylerService.selectElement(index);
     }
 
     selectElement(index: number) {

@@ -7,9 +7,18 @@
     .email-body {
 
     }
-}
 
-.rendered-component:hover {
-    border: 2px solid $secondary;
-    cursor: pointer;
+    .rendered-row {
+        border: 2px solid black;
+    }
+    
+    .rendered-row:hover {
+        border: 2px solid $secondary;
+        cursor: pointer;
+    }
+    
+    .rendered-component:hover {
+        border: 2px solid $secondary;
+        cursor: pointer;
+    }
 }
