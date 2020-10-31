@@ -14,6 +14,7 @@ import { StylerComponent } from './styler/styler.component';
 import { ComponentBuilderComponent } from './component-builder/component-builder.component';
 import { ComponentListComponent } from './component-list/component-list.component';
 import { ComponentComponent } from './component/component.component';
+import { HomeComponent } from './home/home.component';
 
 // rendered components
 import { HeaderComponentComponent } from './renderer-components/header-component/header-component.component';
@@ -44,6 +45,7 @@ import { EmailStructureComponent } from './email-structure/email-structure.compo
     TextComponentComponent,
     SelectedElementComponent,
     EmailStructureComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
