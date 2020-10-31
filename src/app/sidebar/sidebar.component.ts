@@ -11,12 +11,13 @@ export class SidebarComponent implements OnInit {
         colorPalette: false,
         elements: false,
         styles: false,
-        componentList: false,
+        componentList: true,
     }
 
     constructor() { }
 
     ngOnInit(): void {
+
     }
 
     toggleMenuItem(item) {

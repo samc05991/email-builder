@@ -3,10 +3,10 @@
 .dashboard-container {
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 200px auto;
+    grid-template-columns: 200px auto 200px;
     grid-template-rows: auto;
     grid-template-areas: 
-        "sidebar renderer";
+        "sidebar renderer element";
 
     app-sidebar {
         grid-area: sidebar;
@@ -18,5 +18,9 @@
 
     app-renderer {
         grid-area: renderer;
+    }
+
+    app-selected-element {
+        grid-area: element;
     }
 }
