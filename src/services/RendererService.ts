@@ -8,13 +8,21 @@ export class RendererService {
     public renderedRows: RenderedRow[] = [];
     public renderedComponents: RenderedComponent[] = [];
 
+    public selectedRow: RenderedRow;
+
     constructor() {
         this.itemAdded$ = new EventEmitter();
     }
 
-    public add(item: RenderedComponent, rowId: string): void {
-        this.renderedComponents.push(item);
-        this.itemAdded$.emit(item);
+    public add(item: RenderedComponent): void {
+        let newItem = Object.assign({}, item);
+        newItem.id = `rendered-r-${this.selectedRow.id}-c-${this.renderedComponents.length}`;
+
+
+        this.renderedComponents.push(newItem);
+        this.selectedRow.components.push(newItem);
+
+        this.itemAdded$.emit(newItem);
     }
 
     public addRow(row: RenderedRow): void {
@@ -22,5 +30,9 @@ export class RendererService {
 
         this.renderedRows.push(row);
         // this.itemAdded$.emit(row);
+    }
+
+    public selectRow(row: RenderedRow) {
+        this.selectedRow = row;
     }
 }

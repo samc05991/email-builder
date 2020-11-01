@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation  } from '@angular/core';
 import { RenderedComponent } from 'src/models/RenderedComponent';
+import { RenderedRow } from 'src/models/RenderedRow';
 import { RendererService } from 'src/services/RendererService';
 import { StylerService } from 'src/services/StylerService';
 
@@ -22,11 +23,12 @@ export class RendererComponent implements OnInit {
 
     }
 
-    selectRow(index: number) {
-        this._stylerService.selectElement(index);
+    selectRow(index: number, row: RenderedRow) {
+        this._stylerService.selectRow(index);
+        this._rendererService.selectRow(row);
     }
 
-    selectElement(index: number) {
-        this._stylerService.selectElement(index);
+    selectComponent(index: number, rowIndex: number) {
+        this._stylerService.selectComponent(index, rowIndex);
     }
 }

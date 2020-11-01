@@ -10,6 +10,9 @@
 
     .rendered-row {
         border: 2px solid black;
+        color: white;
+        min-height: 50px;
+        background-color: black;
     }
     
     .rendered-row:hover {
@@ -20,5 +23,17 @@
     .rendered-component:hover {
         border: 2px solid $secondary;
         cursor: pointer;
+    }
+
+    .grid-1 {
+
+    }
+
+    .grid-2 {
+        
+    }
+
+    .grid-3 {
+        
     }
 }

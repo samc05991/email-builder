@@ -18,7 +18,7 @@ export class ComponentListComponent implements OnInit {
     }
 
     renderHtml(item: RenderedComponent) {
-        // this._rendererService.add(item);
+        this._rendererService.add(item);
     }
 
     createComponents() {
