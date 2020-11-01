@@ -8,8 +8,12 @@ export class StylerService {
 
     }
 
-    selectElement(index) {
-        this.element = document.getElementById(`rendered-${index}`);
+    selectComponent(index, rowIndex) {
+        this.element = document.getElementById(`rendered-r-${rowIndex}c-${index}`);
+    }
+
+    selectRow(index) {
+        this.element = document.getElementById(`rendered-r-${index}`);
     }
 
     textAlignLeft() {

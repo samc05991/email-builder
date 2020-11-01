@@ -2,13 +2,15 @@
     <app-styler></app-styler>
 
     <div class="email-body" style="background-color: white; width: 400px; margin: 0 auto; height: 100%">
-        <div *ngFor="let component of components; index as i;" (click)="selectElement(i)">
-            <div id="rendered-{{i}}" class="rendered-component">
-                <app-header-component *ngIf="component.name === 'Header'"></app-header-component>
-                <app-section-component *ngIf="component.name === 'Section'"></app-section-component>
-                <app-image-component *ngIf="component.name === 'Image'"></app-image-component>
-                <app-text-component *ngIf="component.name === 'Text'"></app-text-component>
-                <app-card-component *ngIf="component.name === 'Card'"></app-card-component>
+        <div *ngFor="let row of rows; index as r;" (click)="selectRow(i, row)" class="rendered-row" id="{{row.id}}">
+            <div *ngFor="let component of row.components; index as c;" (click)="selectComponent(c, r)" id="{{component.id}}" >
+                <div class="rendered-component">
+                    <app-header-component *ngIf="component.name === 'Header'"></app-header-component>
+                    <app-section-component *ngIf="component.name === 'Section'"></app-section-component>
+                    <app-image-component *ngIf="component.name === 'Image'"></app-image-component>
+                    <app-text-component *ngIf="component.name === 'Text'"></app-text-component>
+                    <app-card-component *ngIf="component.name === 'Card'"></app-card-component>
+                </div>
             </div>
         </div>
     </div>
