@@ -13,9 +13,9 @@ export class StylerComponent implements OnInit {
     }
 
     ngOnInit(): void {
+
     }
 
-    
     textAlignLeft() {
         this._stylerService.textAlignLeft();
     }

@@ -14,9 +14,13 @@ export class RendererComponent implements OnInit {
 
     rows = [];
 
+    selectedRow: RenderedRow;
+
     constructor(private _rendererService: RendererService, private _stylerService: StylerService) {
         // _rendererService.itemAdded$.subscribe((item: RenderedComponent) => this.rows.push(item));
         this.rows = _rendererService.renderedRows;
+        this.selectedRow = _rendererService.selectedRow;
+
     }
 
     ngOnInit(): void {
@@ -26,6 +30,8 @@ export class RendererComponent implements OnInit {
     selectRow(index: number, row: RenderedRow) {
         this._stylerService.selectRow(index);
         this._rendererService.selectRow(row);
+
+        this.selectedRow = this._rendererService.selectedRow;
     }
 
     selectComponent(index: number, rowIndex: number) {

@@ -1,6 +1,3 @@
-import { EventEmitter } from '@angular/core';
-import { RenderedComponent } from '../models/RenderedComponent';
-
 export class StylerService {
     element: any;
 

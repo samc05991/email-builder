@@ -9,19 +9,35 @@
     }
 
     .rendered-row {
-        border: 2px solid black;
+        border: 1px solid $primary;
+        border-bottom: 0px;
+        border-top: 0px;
         color: white;
-        min-height: 50px;
-        background-color: black;
+        min-height: 250px;
     }
-    
+
     .rendered-row:hover {
-        border: 2px solid $secondary;
+        border: 3px solid $primary;
+        border-bottom: 0px;
+        border-top: 0px;
         cursor: pointer;
     }
     
     .rendered-component:hover {
-        border: 2px solid $secondary;
+        border: 5px solid $secondary;
+        cursor: pointer;
+    }
+
+    .selected-row {
+        border: 3px solid $dark;
+        border-bottom: 0px;
+        border-top: 0px;
+    }
+
+    .selected-row:hover {
+        border: 3px solid $dark;
+        border-bottom: 0px;
+        border-top: 0px;
         cursor: pointer;
     }
 

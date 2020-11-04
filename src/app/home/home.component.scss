@@ -1,31 +1,29 @@
 @import "../../vars.scss";
 
-.homeBox{
-    width: 245px;
-    border: 2px solid $secondary;
-    border-radius: 5px;
-    margin: 10px 5px;
-    padding: 6px;
-    float: left;
-    background-color: $white;
-    position: relative;
-    left: 650px;
-    top: 100px;
-    
-}
-button{
-    position: relative;
-    left: 45px;
-}
-h3{
-    text-align: center;
-}
+.home-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 100vh;
 
-// .homeBox{
-//     width: 20%;
-//     height: 400px;
-//     padding-left: 10%;
-//     float: left;
-//     background-color: $white;
-// }
+    .homeBox{
+        width: 245px;
+        border: 2px solid $secondary;
+        border-radius: 5px;
+        margin: 0 auto;
+        padding: 6px;
+        float: left;
+        background-color: $white;
+        position: relative;
+        height: 266px;   
+    }
+
+    button{
+        position: relative;
+        left: 45px;
+    }
+
+    h3{
+        text-align: center;
+    }
+}
 

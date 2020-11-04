@@ -1,8 +1,13 @@
 <div id="renderer" class="renderer-container">
     <app-styler></app-styler>
 
-    <div class="email-body" style="background-color: white; width: 400px; margin: 0 auto; height: 100%">
-        <div *ngFor="let row of rows; index as r;" (click)="selectRow(i, row)" class="rendered-row" id="{{row.id}}">
+    <div class="email-body" style="background-color: white; width: 600px; margin: 0 auto; height: 100%">
+        <div *ngFor="let row of rows; index as r;"
+            (click)="selectRow(i, row)"
+            class="rendered-row"
+            id="{{row.id}}"
+            [ngStyle]="row.styles"
+            [ngClass]="{'selected-row' : row.id === selectedRow.id }">
             <div *ngFor="let component of row.components; index as c;" (click)="selectComponent(c, r)" id="{{component.id}}" >
                 <div class="rendered-component">
                     <app-header-component *ngIf="component.name === 'Header'"></app-header-component>
