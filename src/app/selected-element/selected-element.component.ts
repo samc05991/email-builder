@@ -12,7 +12,7 @@ export class SelectedElementComponent implements OnInit {
     selectedElement: any;
 
     constructor(private _rendererService: RendererService, private _stylerService: StylerService) {
-        this.selectedElement = _stylerService.element;
+        this.selectedElement = _rendererService.selectedComponent;
     }
 
     ngOnInit(): void {

@@ -9,6 +9,7 @@ export class RendererService {
     public renderedComponents: RenderedComponent[] = [];
 
     public selectedRow: RenderedRow;
+    public selectedComponent: RenderedComponent;
 
     constructor() {
         this.itemAdded$ = new EventEmitter();
@@ -16,7 +17,7 @@ export class RendererService {
 
     public add(item: RenderedComponent): void {
         let newItem = Object.assign({}, item);
-        newItem.id = `rendered-r-${this.selectedRow.id}-c-${this.renderedComponents.length}`;
+        newItem.id = `${this.selectedRow.id}-c-${this.renderedComponents.length}`;
 
         this.renderedComponents.push(newItem);
         this.selectedRow.components.push(newItem);
@@ -35,7 +36,10 @@ export class RendererService {
     public selectRow(row: RenderedRow) {
         this.selectedRow = row;
     }
-
+    public selectComponent(component: RenderedComponent) {
+        this.selectedComponent = component;
+        console.log(component);
+    }
     // Styles
     public updateStyleComponent(style: string, value: string, itemId: string) {
         for(let i = 0; i < this.renderedComponents.length; i++) {

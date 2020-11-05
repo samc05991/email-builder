@@ -15,6 +15,7 @@ export class RendererComponent implements OnInit {
     rows = [];
 
     selectedRow: RenderedRow;
+    selectedComponent:RenderedComponent;
 
     constructor(private _rendererService: RendererService, private _stylerService: StylerService) {
         // _rendererService.itemAdded$.subscribe((item: RenderedComponent) => this.rows.push(item));
@@ -34,7 +35,8 @@ export class RendererComponent implements OnInit {
         this.selectedRow = this._rendererService.selectedRow;
     }
 
-    selectComponent(index: number, rowIndex: number) {
-        this._stylerService.selectComponent(index, rowIndex);
+    selectComponent(component: RenderedComponent) {
+       /// this._stylerService.selectComponent(index, rowIndex);
+        this._rendererService.selectComponent(component);
     }
 }

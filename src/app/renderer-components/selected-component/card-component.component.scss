@@ -1,0 +1,10 @@
+@import "../../../vars.scss";
+
+.selected-component-container {
+    color: $dark;
+    border: 2px solid $dark;text-align: center;
+    padding: 5px;
+    margin: 5px;
+    font-size: 14px;
+    border-radius: 8px;
+}
