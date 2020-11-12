@@ -1,0 +1,16 @@
+@import "../../vars.scss";
+
+.breadcrumb-container {
+    padding: 10px;
+
+    .breadcrumb-row {
+        padding-left: 10px;
+        border-left: 2px solid $primary;
+    }
+
+    .breadcrumb-component {
+        margin-left: 10px;
+        padding-left: 10px;
+        border-left: 2px solid $secondary;
+    }
+}

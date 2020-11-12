@@ -4,6 +4,12 @@
     background-color: $renderer;
     height: 100%;
 
+    .renderer {
+        display: grid;
+        grid-template-columns: 200px auto;
+        height: 100%;
+    }
+
     .email-body {
 
     }

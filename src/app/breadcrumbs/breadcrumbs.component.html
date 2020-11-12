@@ -1,0 +1,8 @@
+<div class="breadcrumb-container">
+    <div *ngFor="let row of rows" class="breadcrumb-row">
+        Row
+        <div *ngFor="let component of row.components" class="breadcrumb-component">
+            {{component.name}}
+        </div>
+    </div>
+</div>

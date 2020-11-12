@@ -24,6 +24,10 @@ import { ImageComponentComponent } from './renderer-components/image-component/i
 import { TextComponentComponent } from './renderer-components/text-component/text-component.component';
 import { SelectedElementComponent } from './selected-element/selected-element.component';
 import { EmailStructureComponent } from './email-structure/email-structure.component';
+import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
+import { LoginComponent } from './login/login.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { DeveloperPortalComponent } from './developer-portal/developer-portal.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +49,11 @@ import { EmailStructureComponent } from './email-structure/email-structure.compo
     TextComponentComponent,
     SelectedElementComponent,
     EmailStructureComponent,
-    HomeComponent
+    HomeComponent,
+    BreadcrumbsComponent,
+    LoginComponent,
+    SignUpComponent,
+    DeveloperPortalComponent
   ],
   imports: [
     BrowserModule,
